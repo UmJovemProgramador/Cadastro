@@ -5,8 +5,11 @@ function cadastrar() {
 
   if (nome === '' || email === '' || idade === '') {
     alert('Por favor, preencha todos os campos antes de cadastrar.');
+  } else if (idade < 0 || idade > 150) {
+    alert('Idade inválida.');
+  } else if (idade < 18) {
+    alert('Você ainda não possui idade suficiente.');
   } else {
-    // All fields are filled, load the link
     var link = 'https://umjovemprogramador.github.io/Loteria-4.0/';
     window.location.href = link;
   }
